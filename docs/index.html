@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lord of the Rings</title>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+      zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    </script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #myChart {
+        height: 100%;
+        width: 100%;
+        min-height: 150px;
+      }
+
+      .zc-ref {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="myChart"></div>
+    <script>
+      let chartData = [
+        {
+          type: "node",
+          id: "Pippin",
+          text: "Pippin",
+          dataFullName: "Peregrin Took",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/pippin.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Merry",
+          text: "Merry",
+          dataFullName: "Meriadoc Brandybuck",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/merry.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Legolas",
+          text: "Legolas",
+          dataFullName: "Legolas",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/legolas.jpg",
+          },
+        },
+
+        {
+          type: "node",
+          id: "Celeborn",
+          text: "Celeborn",
+          dataFullName: "Celeborn",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/celeborn.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Elrond",
+          text: "Elrond",
+          dataFullName: "Elrond",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/elrond.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Arwen",
+          text: "Arwen",
+          dataFullName: "Arwen",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/arwen.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Sam",
+          text: "Sam",
+          dataFullName: "Samwise Gamgee",
+          style: { "background-fit": "xy", backgroundImage: "avatars/sam.jpg" },
+        },
+        { type: "node", id: "n5", cls: "fam", text: "", dataFullName: "" },
+
+        {
+          type: "node",
+          id: "Frodo",
+          text: "Frodo",
+          dataFullName: "Frodo Baggins",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/frodo.jpg",
+          },
+        },
+
+        {
+          type: "node",
+          id: "Galadriel",
+          text: "Galadriel",
+          dataFullName: "Galadriel",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/galadriel.jpg",
+          },
+        },
+        { type: "node", id: "n6", cls: "fam", text: "", dataFullName: "" },
+        {
+          type: "node",
+          id: "Gwaihir",
+          text: "Gwaihir",
+          dataFullName: "Gwaihir",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/gwaihir.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Théoden",
+          text: "Théoden",
+          dataFullName: "Théoden",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/theoden.jpg",
+          },
+        },
+        { type: "node", id: "n7", cls: "fam", text: "", dataFullName: "" },
+        {
+          type: "node",
+          id: "n2",
+          cls: "main",
+          text: "The Fellowship",
+          dataFullName: "",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/fellowship.jpg",
+          },
+        },
+
+        {
+          type: "node",
+          id: "Gandalf",
+          text: "Gandalf",
+          dataFullName: "Gandalf",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/gandalf.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Treebeard",
+          text: "Treebeard",
+          dataFullName: "Treebeard",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/treebeard.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "n3",
+          cls: "main",
+          text: "Sauron",
+          dataFullName: "",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/sauron.jpg",
+          },
+        },
+
+        {
+          type: "node",
+          id: "Éomer",
+          text: "Éomer",
+          dataFullName: "Éomer",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/eomer.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Aragorn",
+          text: "Aragorn",
+          dataFullName: "Aragorn II Elessar",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/aragorn.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Gimli",
+          text: "Gimli",
+          dataFullName: "Gimli",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/gimli.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "n4",
+          cls: "main",
+          text: "Gollum",
+          dataFullName: "",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/gollum.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "n1",
+          cls: "main",
+          text: "One Ring",
+          dataFullName: "",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/one_ring.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Witch-king",
+          text: "Witch-king",
+          dataFullName: "Witch-king of Angmar",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/witch-king.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Éowyn",
+          text: "Éowyn",
+          dataFullName: "Éowyn",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/eowyn.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Faramir",
+          text: "Faramir",
+          dataFullName: "Faramir",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/faramir.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Denethor",
+          text: "Denethor",
+          dataFullName: "Denethor II",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/denethor.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Gríma",
+          text: "Gríma",
+          dataFullName: "Gríma Wormtongue",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/grima.jpg",
+          },
+        },
+
+        {
+          type: "node",
+          id: "Saruman",
+          text: "Saruman",
+          dataFullName: "Saruman",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/saruman.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Orcs",
+          text: "Orcs",
+          dataFullName: "Orcs",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/orcs.jpg",
+          },
+        },
+        {
+          type: "node",
+          id: "Boromir",
+          text: "Boromir",
+          dataFullName: "Boromir",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/boromir.jpg",
+          },
+        },
+
+        { type: "link", source: "n1", target: "n2" },
+        { type: "link", source: "n1", target: "n3" },
+        { type: "link", source: "n1", target: "n4" },
+
+        { type: "link", source: "n2", target: "Frodo" },
+        { type: "link", source: "n2", target: "Galadriel" },
+        { type: "link", source: "n2", target: "Gimli" },
+        { type: "link", source: "n2", target: "Gandalf" },
+        { type: "link", source: "n2", target: "Aragorn" },
+
+        { type: "link", source: "n5", target: "Frodo" },
+        { type: "link", source: "n5", target: "Pippin" },
+        { type: "link", source: "n5", target: "Sam" },
+        { type: "link", source: "n5", target: "Merry" },
+
+        { type: "link", source: "n6", target: "Legolas" },
+        { type: "link", source: "n6", target: "Elrond" },
+        { type: "link", source: "n6", target: "Arwen" },
+        { type: "link", source: "n6", target: "Celeborn" },
+        { type: "link", source: "n6", target: "Galadriel" },
+
+        { type: "link", source: "n7", target: "Aragorn" },
+        { type: "link", source: "n7", target: "Théoden" },
+        { type: "link", source: "n7", target: "Éomer" },
+        { type: "link", source: "n7", target: "Éowyn" },
+        { type: "link", source: "n7", target: "Boromir" },
+        { type: "link", source: "n7", target: "Faramir" },
+        { type: "link", source: "n7", target: "Denethor" },
+
+        { type: "link", source: "Gandalf", target: "Treebeard" },
+        { type: "link", source: "Gandalf", target: "Gwaihir" },
+
+        { type: "link", source: "n3", target: "Witch-king" },
+        { type: "link", source: "n3", target: "Orcs" },
+        { type: "link", source: "n3", target: "Saruman" },
+        { type: "link", source: "n3", target: "Gríma" },
+      ];
+
+      let chartConfig = {
+        type: "tree",
+        plot: {},
+        plotarea: {
+          margin: 0,
+          backgroundImage: "background.jpg",
+          backgroundFit: "xy",
+          backgroundRepeat: false,
+        },
+        options: {
+          aspect: "graph",
+          springLength: 120,
+          attractionConstant: 5,
+          repulsionConstant: 15000,
+          repulsionDistanceFactor: 20,
+          node: {
+            size: 30,
+            borderWidth: 3,
+            borderColor: "white",
+            backgroundColor: "#fff",
+            backgroundRepeat: "no-repeat",
+            backgroundScale: 0.75,
+            label: {
+              color: "white",
+              fontWeight: "bold",
+              offsetY: 45,
+            },
+            tooltip: {
+              text: "%data-full-name",
+              visible: true,
+            },
+          },
+          "node[cls-main]": {
+            size: 24,
+            borderWidth: 3,
+            borderColor: "#000",
+            backgroundColor: "white",
+            label: {
+              visible: true,
+            },
+            tooltip: {
+              text: "%data-full-name",
+              visible: false,
+            },
+          },
+          "node[cls-fam]": {
+            size: 12,
+            borderWidth: 2,
+            borderColor: "#fff",
+            backgroundColor: "white",
+            label: {
+              visible: false,
+            },
+          },
+          link: {
+            lineWidth: 3,
+            lineColor: "white",
+          },
+        },
+        source: {
+          text: "VISUALISATION © SHANGJIE LYU 2023",
+          align: "center",
+          color: "white",
+          fontSize: 12,
+          marginBottom: 6,
+        },
+        series: chartData,
+      };
+
+      zingchart.render({
+        id: "myChart",
+        width: "100%",
+        height: "100%",
+        output: "canvas",
+        data: chartConfig,
+      });
+    </script>
+  </body>
+</html>
