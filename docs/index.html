@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>Lord of the Rings</title>
+    <link rel="icon" href="icon.png" />
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-    <script>
+    <!-- <script>
       zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
-    </script>
+    </script> -->
 
     <style>
       html,
@@ -29,7 +30,7 @@
     </style>
   </head>
 
-  <body>
+  <body oncontextmenu="return false" ondragstart="return false">
     <div id="myChart"></div>
     <script>
       let chartData = [
@@ -379,7 +380,7 @@
           repulsionDistanceFactor: 20,
           node: {
             size: 30,
-            borderWidth: 3,
+            borderWidth: 1,
             borderColor: "white",
             backgroundColor: "#fff",
             backgroundRepeat: "no-repeat",
@@ -395,8 +396,8 @@
             },
           },
           "node[cls-main]": {
-            size: 24,
-            borderWidth: 3,
+            size: 30,
+            borderWidth: 1,
             borderColor: "#000",
             backgroundColor: "white",
             label: {
