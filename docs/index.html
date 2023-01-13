@@ -68,24 +68,12 @@
         },
         {
           type: "node",
-          id: "Legolas",
-          text: "Legolas",
-          cls: "fellowship",
-          dataFullName: "Legolas",
+          id: "Arwen",
+          text: "Arwen",
+          dataFullName: "Arwen",
           style: {
             "background-fit": "xy",
-            backgroundImage: "avatars/legolas.jpg",
-          },
-        },
-
-        {
-          type: "node",
-          id: "Celeborn",
-          text: "Celeborn",
-          dataFullName: "Celeborn",
-          style: {
-            "background-fit": "xy",
-            backgroundImage: "avatars/celeborn.jpg",
+            backgroundImage: "avatars/arwen.jpg",
           },
         },
         {
@@ -100,14 +88,26 @@
         },
         {
           type: "node",
-          id: "Arwen",
-          text: "Arwen",
-          dataFullName: "Arwen",
+          id: "Legolas",
+          text: "Legolas",
+          cls: "fellowship",
+          dataFullName: "Legolas",
           style: {
             "background-fit": "xy",
-            backgroundImage: "avatars/arwen.jpg",
+            backgroundImage: "avatars/legolas.jpg",
           },
         },
+        {
+          type: "node",
+          id: "Celeborn",
+          text: "Celeborn",
+          dataFullName: "Celeborn",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/celeborn.jpg",
+          },
+        },
+
         {
           type: "node",
           id: "Sam",
@@ -415,7 +415,7 @@
           },
           "node[cls-main]": {
             size: 32,
-            borderWidth: 3,
+            borderWidth: 2,
             borderColor: "#036",
             label: {
               visible: true,
@@ -426,7 +426,7 @@
           },
           "node[cls-fellowship]": {
             size: 30,
-            borderWidth: 3,
+            borderWidth: 2,
             borderColor: "#060",
             label: {
               visible: true,
@@ -446,7 +446,7 @@
           },
           link: {
             lineWidth: 3,
-            lineColor: "#666",
+            lineColor: "#cccccc",
           },
         },
         source: {
