@@ -78,6 +78,16 @@
         },
         {
           type: "node",
+          id: "Elrond",
+          text: "Elrond",
+          dataFullName: "Elrond",
+          style: {
+            "background-fit": "xy",
+            backgroundImage: "avatars/elrond.jpg",
+          },
+        },
+        {
+          type: "node",
           id: "Legolas",
           text: "Legolas",
           cls: "fellowship",
@@ -95,16 +105,6 @@
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/arwen.jpg",
-          },
-        },
-        {
-          type: "node",
-          id: "Elrond",
-          text: "Elrond",
-          dataFullName: "Elrond",
-          style: {
-            "background-fit": "xy",
-            backgroundImage: "avatars/elrond.jpg",
           },
         },
         {
@@ -197,7 +197,7 @@
         {
           type: "node",
           id: "n3",
-          cls: "main",
+          cls: "dark",
           text: "Sauron",
           dataFullName: "",
           style: {
@@ -264,6 +264,7 @@
           type: "node",
           id: "Witch-king",
           text: "Witch-king",
+          cls: "dark",
           dataFullName: "Witch-king of Angmar",
           style: {
             "background-fit": "xy",
@@ -304,6 +305,7 @@
           type: "node",
           id: "Gríma",
           text: "Gríma",
+          cls: "dark",
           dataFullName: "Gríma Wormtongue",
           style: {
             "background-fit": "xy",
@@ -315,6 +317,7 @@
           type: "node",
           id: "Saruman",
           text: "Saruman",
+          cls: "dark",
           dataFullName: "Saruman",
           style: {
             "background-fit": "xy",
@@ -427,6 +430,17 @@
             size: 30,
             borderWidth: 2,
             borderColor: "#060",
+            label: {
+              visible: true,
+            },
+            tooltip: {
+              text: "%data-full-name",
+            },
+          },
+          "node[cls-dark]": {
+            size: 30,
+            borderWidth: 2,
+            borderColor: "black",
             label: {
               visible: true,
             },
