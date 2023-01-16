@@ -7,7 +7,7 @@
     <meta property="og:title" content="Lord of the Rings" />
     <meta
       property="og:description"
-      content="Network Visualization for major characters in &quot;The Lord of the Rings&quot;"
+      content='Network Visualization for major characters in "The Lord of the Rings"'
     />
     <meta
       property="og:image"
@@ -403,7 +403,7 @@
             size: 30,
             borderWidth: 2,
             borderColor: textColor,
-            backgroundColor: "#cccccc",
+            backgroundColor: textColor,
             backgroundRepeat: "no-repeat",
             backgroundScale: 0.75,
             label: {
@@ -413,6 +413,8 @@
             },
             tooltip: {
               text: "%data-full-name",
+              "background-color": "#f5af56",
+              "font-color": textColor,
             },
           },
           "node[cls-main]": {
@@ -452,7 +454,7 @@
             size: 10,
             borderWidth: 2,
             borderColor: textColor,
-            backgroundColor: "#cccccc",
+            backgroundColor: textColor,
             label: {
               visible: false,
             },
