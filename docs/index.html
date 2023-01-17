@@ -46,7 +46,8 @@
   <body>
     <div id="myChart"></div>
     <script>
-      const textColor = "#d3d3d3";
+      const textColor = "#dcdcdc";
+      const mainColor = "#dfa027";
 
       let chartData = [
         {
@@ -267,7 +268,7 @@
         },
         {
           type: "node",
-          id: "Witch-king",
+          id: "Witchking",
           text: "Witch-king",
           cls: "dark",
           dataFullName: "Witch-king of Angmar",
@@ -384,7 +385,7 @@
         { type: "link", source: "Gandalf", target: "Treebeard" },
         { type: "link", source: "Gandalf", target: "Gwaihir" },
 
-        { type: "link", source: "n3", target: "Witch-king" },
+        { type: "link", source: "n3", target: "Witchking" },
         { type: "link", source: "n3", target: "Orcs" },
         { type: "link", source: "n3", target: "Saruman" },
         { type: "link", source: "n3", target: "Gríma" },
@@ -422,8 +423,8 @@
             },
             tooltip: {
               text: "%data-full-name",
-              "background-color": "#f5af56",
-              "border-color": "#f5af56",
+              "background-color": mainColor,
+              "border-color": mainColor,
               "font-color": "white",
               "font-family": "ringbearer",
               "font-size": 12,
@@ -432,7 +433,7 @@
           "node[cls-main]": {
             size: 32,
             borderWidth: 2,
-            borderColor: "#f5af56",
+            borderColor: mainColor,
             label: {
               offsetY: 42,
             },
@@ -440,7 +441,7 @@
           "node[cls-dark]": {
             size: 30,
             borderWidth: 2,
-            borderColor: textColor,
+            borderColor: "black",
           },
           "node[cls-fam]": {
             size: 10,
