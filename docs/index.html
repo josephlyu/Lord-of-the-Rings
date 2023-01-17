@@ -52,7 +52,7 @@
           type: "node",
           id: "Pippin",
           text: "Pippin",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Peregrin Took",
           style: {
             "background-fit": "xy",
@@ -63,7 +63,7 @@
           type: "node",
           id: "Merry",
           text: "Merry",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Meriadoc Brandybuck",
           style: {
             "background-fit": "xy",
@@ -94,7 +94,7 @@
           type: "node",
           id: "Legolas",
           text: "Legolas",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Legolas",
           style: {
             "background-fit": "xy",
@@ -115,7 +115,7 @@
           type: "node",
           id: "Sam",
           text: "Sam",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Samwise Gamgee",
           style: { "background-fit": "xy", backgroundImage: "avatars/sam.jpg" },
         },
@@ -125,7 +125,7 @@
           type: "node",
           id: "Frodo",
           text: "Frodo",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Frodo Baggins",
           style: {
             "background-fit": "xy",
@@ -181,7 +181,7 @@
           type: "node",
           id: "Gandalf",
           text: "Gandalf",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Gandalf",
           style: {
             "background-fit": "xy",
@@ -224,7 +224,7 @@
           type: "node",
           id: "Aragorn",
           text: "Aragorn",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Aragorn II Elessar",
           style: {
             "background-fit": "xy",
@@ -235,7 +235,7 @@
           type: "node",
           id: "Gimli",
           text: "Gimli",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Gimli",
           style: {
             "background-fit": "xy",
@@ -343,7 +343,7 @@
           type: "node",
           id: "Boromir",
           text: "Boromir",
-          cls: "fellowship",
+          cls: "main",
           dataFullName: "Boromir",
           style: {
             "background-fit": "xy",
@@ -417,7 +417,7 @@
               fontWeight: "bold",
               fontSize: 12,
               offsetY: 40,
-              width: 80,
+              width: 120,
             },
             tooltip: {
               text: "%data-full-name",
@@ -431,11 +431,9 @@
             size: 32,
             borderWidth: 2,
             borderColor: "#f5af56",
-          },
-          "node[cls-fellowship]": {
-            size: 30,
-            borderWidth: 2,
-            borderColor: "#060",
+            label: {
+              offsetY: 42,
+            },
           },
           "node[cls-dark]": {
             size: 30,
