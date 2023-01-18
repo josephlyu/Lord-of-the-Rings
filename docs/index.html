@@ -15,12 +15,42 @@
     />
     <meta property="og:url" content="https://lotr.shangjielyu.com/" />
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-
+    <script>
+      function addLogo() {
+        const colorFilter =
+          "invert(48%) sepia(1%) saturate(906%) hue-rotate(187deg) brightness(89%) contrast(89%)";
+        let logo = document.createElement("img");
+        logo.src = "logo.png";
+        logo.style.position = "absolute";
+        logo.style.top = "1em";
+        logo.style.left = "1em";
+        logo.style.zIndex = "9999";
+        logo.style.width = "8em";
+        logo.style.height = "auto";
+        logo.style.filter = colorFilter;
+        logo.style.cursor = "pointer";
+        logo.style.imageRendering = "crisp-edges";
+        logo.addEventListener("mouseover", function () {
+          this.style.filter = "invert(0%)";
+        });
+        logo.addEventListener("mouseout", function () {
+          this.style.filter = colorFilter;
+        });
+        logo.addEventListener("click", function () {
+          window.location.href = "https://portfolio.shangjielyu.com/";
+        });
+        document.body.appendChild(logo);
+      }
+    </script>
     <style>
       @font-face {
         font-family: "Ringbearer";
         src: url("fonts/ringbearer.woff2") format("woff2"),
           url("fonts/ringbearer.woff") format("woff");
+      }
+
+      img {
+        image-rendering: crisp-edges;
       }
 
       html,
