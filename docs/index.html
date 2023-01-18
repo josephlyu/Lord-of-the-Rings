@@ -16,9 +16,11 @@
     <meta property="og:url" content="https://lotr.shangjielyu.com/" />
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <script>
+      const logoFilter =
+        "invert(66%) sepia(53%) saturate(545%) hue-rotate(354deg) brightness(89%) contrast(92%)";
+      const linkFilter =
+        "invert(100%) sepia(0%) saturate(297%) hue-rotate(209deg) brightness(111%) contrast(84%)";
       function addLogo() {
-        const colorFilter =
-          "invert(66%) sepia(53%) saturate(545%) hue-rotate(354deg) brightness(89%) contrast(92%)";
         let logo = document.createElement("img");
         logo.src = "logo.png";
         logo.style.position = "absolute";
@@ -27,14 +29,14 @@
         logo.style.zIndex = "9999";
         logo.style.width = "8em";
         logo.style.height = "auto";
-        logo.style.filter = colorFilter;
+        logo.style.filter = logoFilter;
         logo.style.cursor = "pointer";
         logo.style.imageRendering = "crisp-edges";
         logo.addEventListener("mouseover", function () {
-          this.style.filter = "invert(100%)";
+          this.style.filter = linkFilter;
         });
         logo.addEventListener("mouseout", function () {
-          this.style.filter = colorFilter;
+          this.style.filter = logoFilter;
         });
         logo.addEventListener("click", function () {
           window.location.href = "https://portfolio.shangjielyu.com/";
@@ -72,7 +74,7 @@
   <body onload="addLogo()">
     <div id="myChart"></div>
     <script>
-      const textColor = "#ececec";
+      const textColor = "#eaeaea";
       // const textColor = "#edf1ef";
       // const mainColor = "#dfa027";
       const mainColor = "#da993b";
