@@ -18,7 +18,7 @@
     <script>
       function addLogo() {
         const colorFilter =
-          "brightness(0) saturate(100%) invert(83%) sepia(10%) saturate(7001%) hue-rotate(342deg) brightness(93%) contrast(88%)";
+          "invert(26%) sepia(21%) saturate(2242%) hue-rotate(6deg) brightness(98%) contrast(91%)";
         let logo = document.createElement("img");
         logo.src = "logo.png";
         logo.style.position = "absolute";
@@ -72,7 +72,8 @@
   <body onload="addLogo()">
     <div id="myChart"></div>
     <script>
-      const textColor = "#dcdcdc";
+      // const textColor = "#dcdcdc";
+      const textColor = "#edf1ef";
       const mainColor = "#dfa027";
 
       let chartData = [
@@ -92,7 +93,7 @@
           id: "Merry",
           text: "Merry",
           cls: "main",
-          dataFullName: "Meriadoc Brandybuck",
+          dataFullName: "Meriadoc Brandybuck<br>Race: Hobbits",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/merry.jpg",
