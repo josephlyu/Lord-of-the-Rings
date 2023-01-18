@@ -18,7 +18,7 @@
     <script>
       function addLogo() {
         const colorFilter =
-          "invert(48%) sepia(1%) saturate(906%) hue-rotate(187deg) brightness(89%) contrast(89%)";
+          "filter: brightness(0) saturate(100%) invert(83%) sepia(10%) saturate(7001%) hue-rotate(342deg) brightness(93%) contrast(88%)";
         let logo = document.createElement("img");
         logo.src = "logo.png";
         logo.style.position = "absolute";
@@ -31,7 +31,7 @@
         logo.style.cursor = "pointer";
         logo.style.imageRendering = "crisp-edges";
         logo.addEventListener("mouseover", function () {
-          this.style.filter = "invert(0%)";
+          this.style.filter = "invert(100%)";
         });
         logo.addEventListener("mouseout", function () {
           this.style.filter = colorFilter;
@@ -47,10 +47,6 @@
         font-family: "Ringbearer";
         src: url("fonts/ringbearer.woff2") format("woff2"),
           url("fonts/ringbearer.woff") format("woff");
-      }
-
-      img {
-        image-rendering: crisp-edges;
       }
 
       html,
