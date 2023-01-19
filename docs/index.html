@@ -19,14 +19,13 @@
       const logoFilter =
         "invert(66%) sepia(53%) saturate(545%) hue-rotate(354deg) brightness(89%) contrast(92%)";
       const linkFilter =
-        "invert(100%) sepia(0%) saturate(297%) hue-rotate(209deg) brightness(111%) contrast(84%)";
+        "invert(100%) sepia(1%) saturate(3709%) hue-rotate(168deg) brightness(111%) contrast(80%)";
       function addLogo() {
         let logo = document.createElement("img");
         logo.src = "logo.png";
         logo.style.position = "absolute";
         logo.style.top = "1em";
-        logo.style.left = "48.5%";
-        logo.style.transform = "translateX(-50%)";
+        logo.style.left = "1em";
         logo.style.zIndex = "9999";
         logo.style.width = "8em";
         logo.style.height = "auto";
@@ -76,8 +75,6 @@
     <div id="myChart"></div>
     <script>
       const textColor = "#e5e5e5";
-      // const textColor = "#edf1ef";
-      // const mainColor = "#dfa027";
       const mainColor = "#da993b";
 
       let chartData = [
@@ -107,7 +104,7 @@
           type: "node",
           id: "Celeborn",
           text: "Celeborn",
-          dataFullName: "Celeborn",
+          dataFullName: "Celeborn<br>Race: Elves",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/celeborn.jpg",
@@ -117,7 +114,7 @@
           type: "node",
           id: "Elrond",
           text: "Elrond",
-          dataFullName: "Elrond",
+          dataFullName: "Elrond<br>Race: Half-elves",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/elrond.jpg",
@@ -128,7 +125,7 @@
           id: "Legolas",
           text: "Legolas",
           cls: "main",
-          dataFullName: "Legolas",
+          dataFullName: "Legolas<br>Race: Elves",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/legolas.jpg",
@@ -138,7 +135,7 @@
           type: "node",
           id: "Arwen",
           text: "Arwen",
-          dataFullName: "Arwen",
+          dataFullName: "Arwen<br>Race: Half-elves",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/arwen.jpg",
@@ -149,7 +146,7 @@
           id: "Sam",
           text: "Sam",
           cls: "main",
-          dataFullName: "Samwise Gamgee",
+          dataFullName: "Samwise Gamgee<br>Race: Hobbits",
           style: { "background-fit": "xy", backgroundImage: "avatars/sam.jpg" },
         },
         { type: "node", id: "n5", cls: "fam", text: "", dataFullName: "" },
@@ -159,7 +156,7 @@
           id: "Frodo",
           text: "Frodo",
           cls: "main",
-          dataFullName: "Frodo Baggins",
+          dataFullName: "Frodo Baggins<br>Race: Hobbits",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/frodo.jpg",
@@ -170,7 +167,7 @@
           type: "node",
           id: "Galadriel",
           text: "Galadriel",
-          dataFullName: "Galadriel",
+          dataFullName: "Galadriel<br>Race: Elves",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/galadriel.jpg",
@@ -181,7 +178,7 @@
           type: "node",
           id: "Gwaihir",
           text: "Gwaihir",
-          dataFullName: "Gwaihir",
+          dataFullName: "Gwaihir<br>Race: Great Eagles",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/gwaihir.jpg",
@@ -191,7 +188,7 @@
           type: "node",
           id: "Théoden",
           text: "Théoden",
-          dataFullName: "Théoden",
+          dataFullName: "Théoden<br>Race: Men",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/theoden.jpg",
@@ -215,7 +212,7 @@
           id: "Gandalf",
           text: "Gandalf",
           cls: "main",
-          dataFullName: "Gandalf",
+          dataFullName: "Gandalf<br>Race: Ainur (Maiar)",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/gandalf.jpg",
@@ -225,7 +222,7 @@
           type: "node",
           id: "Treebeard",
           text: "Treebeard",
-          dataFullName: "Treebeard",
+          dataFullName: "Treebeard<br>Race: Ents",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/treebeard.jpg",
@@ -236,7 +233,7 @@
           id: "n3",
           cls: "main",
           text: "Sauron",
-          dataFullName: "Sauron",
+          dataFullName: "Sauron<br>Race: Ainur (Maiar)",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/sauron.jpg",
@@ -247,7 +244,7 @@
           type: "node",
           id: "Éomer",
           text: "Éomer",
-          dataFullName: "Éomer",
+          dataFullName: "Éomer<br>Race: Men",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/eomer.jpg",
@@ -258,7 +255,7 @@
           id: "Aragorn",
           text: "Aragorn",
           cls: "main",
-          dataFullName: "Aragorn II Elessar",
+          dataFullName: "Aragorn II Elessar<br>High King of Arnor and Gondor<br>Race: Men",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/aragorn.jpg",
@@ -269,7 +266,7 @@
           id: "Gimli",
           text: "Gimli",
           cls: "main",
-          dataFullName: "Gimli",
+          dataFullName: "Gimli<br>Race: Dwarves",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/gimli.jpg",
@@ -280,7 +277,7 @@
           id: "n4",
           cls: "main",
           text: "Gollum",
-          dataFullName: "Gollum",
+          dataFullName: "Gollum<br>&quot;My precious!&quot;<br>Race: Hobbits",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/gollum.jpg",
@@ -302,7 +299,7 @@
           id: "Witchking",
           text: "Witch-king",
           cls: "dark",
-          dataFullName: "Witch-king of Angmar",
+          dataFullName: "Witch-king of Angmar<br>Race: Men (Wraiths)",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/witch-king.jpg",
@@ -312,7 +309,7 @@
           type: "node",
           id: "Éowyn",
           text: "Éowyn",
-          dataFullName: "Éowyn",
+          dataFullName: "Éowyn<br>Race: Men",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/eowyn.jpg",
@@ -322,7 +319,7 @@
           type: "node",
           id: "Faramir",
           text: "Faramir",
-          dataFullName: "Faramir",
+          dataFullName: "Faramir<br>Race: Men",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/faramir.jpg",
@@ -332,7 +329,7 @@
           type: "node",
           id: "Denethor",
           text: "Denethor",
-          dataFullName: "Denethor II",
+          dataFullName: "Denethor II<br>Race: Men",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/denethor.jpg",
@@ -343,7 +340,7 @@
           id: "Gríma",
           text: "Gríma",
           cls: "dark",
-          dataFullName: "Gríma Wormtongue",
+          dataFullName: "Gríma Wormtongue<br>Race: Men",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/grima.jpg",
@@ -355,7 +352,7 @@
           id: "Saruman",
           text: "Saruman",
           cls: "dark",
-          dataFullName: "Saruman",
+          dataFullName: "Saruman<br>Race: Ainur (Maiar)",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/saruman.jpg",
@@ -366,7 +363,7 @@
           id: "Orcs",
           text: "Orcs",
           cls: "dark",
-          dataFullName: "Orcs",
+          dataFullName: "Orcs<br>Race: Orcs",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/orcs.jpg",
@@ -377,7 +374,7 @@
           id: "Boromir",
           text: "Boromir",
           cls: "main",
-          dataFullName: "Boromir",
+          dataFullName: "Boromir<br>Race: Men",
           style: {
             "background-fit": "xy",
             backgroundImage: "avatars/boromir.jpg",
