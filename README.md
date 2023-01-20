@@ -6,4 +6,10 @@
 
 #### Interactive visualization is available at: https://lotr.shangjielyu.com/
 
-![preview](docs/background.jpg)
+![preview](docs/og_img.png)
+
+---
+
+### Acknowledgements
+
+[1] [The Lord of the Rings Wiki](https://lotr.fandom.com/wiki/The_Lord_of_the_Rings_Wiki)
