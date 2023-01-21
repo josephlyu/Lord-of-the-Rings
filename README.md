@@ -6,7 +6,7 @@
 
 #### Interactive visualization is available at: https://lotr.shangjielyu.com/
 
-![preview](docs/og_img.png)
+![profile](docs/og_img.png)
 
 ---
 
